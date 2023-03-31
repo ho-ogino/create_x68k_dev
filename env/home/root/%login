@@ -1,0 +1,52 @@
+#
+# dot.login
+#
+
+echo ''
+echo "fish  version $FISH_VERSION[1].$FISH_VERSION[2] patchlevel $FISH_VERSION[3]"
+echo ''
+
+setenv MANPATH       'A:/usr/man;A:/usr/local/man'
+setenv LESSCHARSET   japanese-sjis
+setenv LESSHELP	     A:/usr/lib/less/less.hlp
+setenv LESSSHELL     y
+setenv PAGER         A:/usr/bin/less.x
+setenv TERM          x68k-32-c
+setenv include       C:/usr/include
+setenv lib           C:/usr/lib
+setenv cc            C:/usr/bin
+setenv man           'A:/usr/man;A:/usr/local/man'
+setenv help          C:/usr/local/lib
+setenv termcap       A:/etc/termcap
+setenv tmp           C:/tmp
+setenv temp          C:/tmp
+setenv TCOLOR        20490,lightblue,mediumgoldenrod,wheat
+setenv GCC_AS        HAS060.x
+setenv GCC_LINK      hlk.r
+setenv GCC_NO_XCLIB  yes
+setenv GCC_OPTION    AEFGILMOPSTW
+setenv MARIKO        ABD
+setenv GCC_LIB       .a
+setenv HAS           '-u -z'
+
+
+/usr/bin/lx -x B:/devset.lzh -b C:
+
+set path=(~~ . A:/usr/local/bin A:/usr/bin A:/usr/sys A:/bin A:/sys C:/usr/bin )
+
+
+set savedirs savehist=30
+set ignoreeof
+
+KEY 24 `echo -e "\177"`		# DEL  : ^?
+KEY 25 ''			#  ��  : ^P
+KEY 26 ''			#  ��  : ^B
+KEY 27 ''			#  ��  : ^F
+KEY 28 ''			#  ��  : ^N
+KEY 31 ''			# HOME : ^A
+KEY 32 ''			# UNDO : ^Y
+
+V21 -CV +TWPSDR
+mkdir C:/tmp
+
+

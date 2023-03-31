@@ -1,0 +1,17 @@
+
+onintr -
+
+set path=(~~ . A:/usr/local/bin A:/usr/bin A:/usr/sys A:/bin A:/sys C:/usr/bin)
+set cdpath=(~ A:/usr/local A:/usr)
+set forceio noclobber symlinks
+set cdcmd=(di.x DRIVE.X SUBST.X)
+set batshell=A:/COMMAND.X
+
+if (! $?prompt) return
+  set noalias noglob
+  set history=30
+  set prompt='%~%% '
+  set addsuffix autolist nonullcommandc matchbeep=nomatch listlinks listexec=quick
+  set fignore=(\~ \# .o .BAK '.$$$')
+  bind default
+  unset noalias noglob
